@@ -1,14 +1,40 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
-import TodoItem from "./components/TodoItem";
+import TodoItems from "./components/TodoItems";
+import "./App.css";
 
 function App() {
+  const todoItems = [
+    {
+      name: "Java",
+      dueDate: "10/07/24",
+    },
+    {
+      name: "React",
+      dueDate: "20/07/24",
+    },
+    {
+      name: "HTML",
+      dueDate: "20/07/24",
+    },
+    {
+      name: "CSS",
+      dueDate: "20/07/24",
+    },
+    {
+      name: "React",
+      dueDate: "20/07/24",
+    },
+    {
+      name: "Javascript",
+      dueDate: "20/07/24",
+    },
+  ];
   return (
     <center className="todo-container">
       <AppName />
       <AddTodo />
-      <TodoItem />
+      <TodoItems todoItems={todoItems}></TodoItems>
     </center>
   );
 }

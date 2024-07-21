@@ -1,17 +1,15 @@
-const TodoItem = () => {
-  let todoName = "java";
-  let todoDate = "10/07/2024";
+function TodoItem({ todoName, todoDate }) {
   return (
-    <div className="container text-center">
-      <div className="row">
+    <div className="container">
+      <div className="row item-row">
         <div className="col-6">{todoName}</div>
         <div className="col-4">{todoDate}</div>
         <div className="col-2">
-          <button className="btn btn-danger">Delete</button>
+          <button className="btn btn-danger item-button">Delete</button>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default TodoItem;

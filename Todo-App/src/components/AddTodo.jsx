@@ -1,7 +1,7 @@
 const AddTodo = () => {
   return (
-    <div className="container text-center">
-      <div className="row">
+    <div className="container">
+      <div className="row item-row">
         <div className="col-6">
           <input type="text" placeholder="Enter Todo here" />
         </div>
@@ -9,7 +9,7 @@ const AddTodo = () => {
           <input type="date" placeholder="Enter date here" />
         </div>
         <div className="col-2">
-          <button className="btn btn-success">Add</button>
+          <button className="btn btn-success item-button">Add</button>
         </div>
       </div>
     </div>

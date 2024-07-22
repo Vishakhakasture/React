@@ -1,8 +1,13 @@
 .fruit-item {
-  background-color: khaki;
+  /* background-color: khaki; */
+  text-decoration: dashed;
 }
 
 .item {
   font-weight: 600;
-  color: tomato;
+}
+
+.buy-item {
+  border-radius: 5px;
+  float: right;
 }

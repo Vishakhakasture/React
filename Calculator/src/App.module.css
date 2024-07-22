@@ -1,23 +1,9 @@
 .calculator {
-  border: 1px solid rgb(60, 60, 60);
-  width: 200px;
+  margin-top: 150px;
+  border: 1px solid gray;
   border-radius: 5px;
-}
-
-.display {
-  margin: 10px;
-  width: 175px;
-  font-size: 25px;
-}
-
-.buttonsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.button {
-  height: 45px;
-  width: 45px;
-  margin: 3px;
+  width: 250px;
+  padding: 10px;
+  background-color: black;
+  padding: 5px;
 }

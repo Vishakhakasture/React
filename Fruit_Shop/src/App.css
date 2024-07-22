@@ -1,5 +1,5 @@
 .heading {
+  text-transform: capitalize;
+  color: brown;
   text-align: center;
-  background-color: black;
-  color: aqua;
 }

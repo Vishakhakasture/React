@@ -2,10 +2,6 @@ input {
   width: 100%;
 }
 
-.items-conatiner {
-  text-align: left;
-}
-
 .item-row {
   margin: 10px 5px;
 }

@@ -1,12 +1,12 @@
 import styles from "./FruitInput.module.css";
 
-const FruitInput = ({ handleOnChange }) => {
+const FruitInput = ({ handleKeyDown }) => {
   return (
     <input
       className={styles.search}
       type="text"
       placeholder="Enter fruit item here"
-      onChange={handleOnChange}
+      onKeyDown={handleKeyDown}
       // using onChange we can handle events enter from users through forms
     />
   );

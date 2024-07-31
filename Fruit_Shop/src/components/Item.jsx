@@ -1,5 +1,5 @@
 import styles from "./Item.module.css";
-const Item = ({ fruitItem, handleBuyButton }) => {
+const Item = ({ fruitItem, bought, handleBuyButton }) => {
   // let {fruitItem} = props;
   // const handleBuyButton = (event) => {
   //   //event get
@@ -9,7 +9,11 @@ const Item = ({ fruitItem, handleBuyButton }) => {
   // };
   return (
     <>
-      <li className={`${styles["fruit-item"]} list-group-item`}>
+      <li
+        className={`${styles["fruit-item"]} list-group-item ${
+          bought && "active"
+        }`}
+      >
         <span className={styles["item"]}>{fruitItem}</span>
         <button
           className={`${styles["buy-item"]} btn btn-success`}

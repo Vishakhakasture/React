@@ -5,45 +5,27 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const InitialTodoItems = [
-    {
-      name: "Java",
-      dueDate: "10/07/24",
-    },
-    {
-      name: "React",
-      dueDate: "20/07/24",
-    },
-    {
-      name: "HTML",
-      dueDate: "20/07/24",
-    },
-    {
-      name: "CSS",
-      dueDate: "20/07/24",
-    },
-    {
-      name: "React",
-      dueDate: "20/07/24",
-    },
-    {
-      name: "Javascript",
-      dueDate: "20/07/24",
-    },
-  ];
-
-  const [todoItems, setTodoItems] = useState(InitialTodoItems);
+  const [todoItems, setTodoItems] = useState([]);
 
   const handleNewItem = (itemName, itemDate) => {
     console.log(`new item added: ${itemName} Date : ${itemDate}`);
     const newTodoItems = [...todoItems, { name: itemName, date: itemDate }];
     setTodoItems(newTodoItems);
   };
+
+  const handleDeleteItem = (todoItemName) => {
+    const newTodoItems = todoItems.filter((item) => item.name !== todoItemName);
+    setTodoItems(newTodoItems);
+    console.log(`Item deleted : ${todoItemName}`);
+  };
   return (
     <center className="todo-container">
       <AppName />
       <AddTodo onNewItem={handleNewItem} />
-      <TodoItems todoItems={todoItems}></TodoItems>
+      <TodoItems
+        todoItems={todoItems}
+        onDeleteClick={handleDeleteItem}
+      ></TodoItems>
     </center>
   );
 }

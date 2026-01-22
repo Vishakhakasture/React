@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 import { useState } from "react";
 
 function App() {
-  const [calVal, setCalVal] = useState("");
+  let [calVal, setCalVal] = useState("");
   const onButtonClick = (buttonText) => {
     if (buttonText === "C") {
       setCalVal("");
@@ -12,8 +12,8 @@ function App() {
       const result = eval(calVal);
       setCalVal(result);
     } else {
-      const newDisplayValue = calVal + buttonText;
-      setCalVal(newDisplayValue);
+      const newDisplayValaue = calVal + buttonText;
+      setCalVal(newDisplayValaue);
     }
   };
   return (

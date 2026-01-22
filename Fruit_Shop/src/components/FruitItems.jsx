@@ -8,6 +8,7 @@ const FruitItems = ({ items }) => {
     let newItems = [...activeItems, item];
     setActiveItems(newItems);
   };
+
   return (
     <ul className="list-group">
       {items.map((item) => (

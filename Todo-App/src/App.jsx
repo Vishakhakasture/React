@@ -3,6 +3,7 @@ import AddTodo from "./components/AddTodo";
 import TodoItems from "./components/TodoItems";
 import "./App.css";
 import { useState } from "react";
+import WelcomeMessage from "./components/WelcomeMessage";
 
 function App() {
   const [todoItems, setTodoItems] = useState([]);
@@ -18,10 +19,12 @@ function App() {
     setTodoItems(newTodoItems);
     console.log(`Item deleted : ${todoItemName}`);
   };
+
   return (
     <center className="todo-container">
       <AppName />
       <AddTodo onNewItem={handleNewItem} />
+      {todoItems.length === 0 && <WelcomeMessage />}
       <TodoItems
         todoItems={todoItems}
         onDeleteClick={handleDeleteItem}

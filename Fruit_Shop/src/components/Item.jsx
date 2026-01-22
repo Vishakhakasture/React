@@ -1,5 +1,6 @@
 import styles from "./Item.module.css";
 const Item = ({ fruitItem, bought, handleBuyButton }) => {
+  // this code is created using props 
   // let {fruitItem} = props;
   // const handleBuyButton = (event) => {
   //   //event get
@@ -17,10 +18,10 @@ const Item = ({ fruitItem, bought, handleBuyButton }) => {
         <span className={styles["item"]}>{fruitItem}</span>
         <button
           className={`${styles["buy-item"]} btn btn-success`}
-          //when onClick encounters it also passes event object it creats its own object
+          //when onClick encounters it also passes event object it creates its own object
           // its very important in react this class is type of synthetic based event it works on the basis of operatin system devices like android,ios and many
           onClick={handleBuyButton} // handleBuyButton just this used then this is invoked method
-          //() => handleBuyButton(fruitItem) can be used instead
+          //() => handleBuyButton(fruitIctem) can be used instead
         >
           Buy
         </button>
@@ -30,3 +31,5 @@ const Item = ({ fruitItem, bought, handleBuyButton }) => {
 };
 
 export default Item;
+
+

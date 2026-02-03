@@ -1,7 +1,11 @@
+import { TodoItemsContext } from "../store/todo-items-store";
+import { useContext } from "react";
 import TodoItem from "./TodoItem";
 import styles from "./TodoItems.module.css";
 
-const TodoItems = ({ todoItems, onDeleteClick }) => {
+const TodoItems = () => {
+  const { todoItems, deleteItem } = useContext(TodoItemsContext);
+  // console.log(`todo items from contxt ${todoItemsFromContext}`);
   return (
     <div className={styles.itemsConatiner}>
       {todoItems.map((item) => (
@@ -9,7 +13,7 @@ const TodoItems = ({ todoItems, onDeleteClick }) => {
           key={item.name}
           todoName={item.name}
           todoDate={item.dueDate}
-          onDeleteClick={onDeleteClick}
+          onDeleteClick={deleteItem}
         />
       ))}
     </div>
